@@ -88,6 +88,7 @@ fabric.properties
 
 # Markdown
 .idea/markdown-navigator/
+.idea/markdown-navigator.xml
 
 ### JetBrains Patch ###
 # Comment Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-215987721
