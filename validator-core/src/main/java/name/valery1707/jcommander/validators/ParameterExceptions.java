@@ -7,8 +7,8 @@ public final class ParameterExceptions {
 		throw new IllegalStateException("Must not be created directly");
 	}
 
-	public static void invalidParameter(String parameterName, String errorDescription) throws ParameterException {
-		throw new ParameterException(
+	public static ParameterException invalidParameter(String parameterName, String errorDescription) {
+		return new ParameterException(
 				String.format("Value for parameter '%s' %s."
 						, parameterName, errorDescription
 				));

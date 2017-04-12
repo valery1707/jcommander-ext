@@ -9,7 +9,7 @@ public abstract class NumberValidator<T extends Number> implements IValueValidat
 
 	public void validate(String name, T value) throws ParameterException {
 		if (!check(value.doubleValue(), other().doubleValue())) {
-			invalidParameter(name, "must be " + checkDescriptor() + " " + otherDescriptor());
+			throw invalidParameter(name, "must be " + checkDescriptor() + " " + otherDescriptor());
 		}
 	}
 
