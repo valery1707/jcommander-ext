@@ -5,6 +5,19 @@
 This library contains many extensions for [JCommander](https://github.com/cbeust/jcommander).
 JCommander is command line parsing framework for Java.
 
+### Validators
+
+1. Number
+  1. `EqualTo`
+  1. `GreaterThan`
+  1. `GreaterThanOrEqualTo`
+  1. `LessThan`
+  1. `LessThanOrEqualTo`
+  1. `EqualToZero`
+  1. `GreaterThanZero`
+  1. `GreaterThanOrEqualToZero`
+  1. `LessThanZero`
+  1. `LessThanOrEqualToZero`
 
 ### Build
 
