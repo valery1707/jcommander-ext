@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>name.valery1707</groupId>
+	<artifactId>jcommander-ext</artifactId>
+	<version>0.1.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<description>JCommander extension library</description>
+	<url>https://github.com/valery1707/jcommander-ext</url>
+	<inceptionYear>2017</inceptionYear>
+
+	<scm>
+		<url>https://github.com/valery1707/jcommander-ext</url>
+		<connection>scm:git:https://github.com/valery1707/jcommander-ext</connection>
+		<developerConnection>scm:git|git@github.com:valery1707/jcommander-ext.git</developerConnection>
+	</scm>
+	<issueManagement>
+		<system>GitHub</system>
+		<url>https://github.com/valery1707/jcommander-ext/issues</url>
+	</issueManagement>
+
+	<modules>
+	</modules>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.beust</groupId>
+				<artifactId>jcommander</artifactId>
+				<version>1.64</version>
+			</dependency>
+
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>4.12</version>
+			</dependency>
+			<dependency>
+				<groupId>org.assertj</groupId>
+				<artifactId>assertj-core</artifactId>
+				<version>3.6.2</version>
+			</dependency>
+			<dependency>
+				<groupId>org.mockito</groupId>
+				<artifactId>mockito-core</artifactId>
+				<version>2.7.22</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+</project>
