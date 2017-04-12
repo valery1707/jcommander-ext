@@ -6,11 +6,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="jcommander-ext" />
+        <module name="validator" />
+        <module name="validator-core" />
+        <module name="validator-number" />
+        <module name="validator-test" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="jcommander-ext" target="1.5" />
+      <module name="jcommander-ext" target="1.6" />
+      <module name="validator" target="1.6" />
+      <module name="validator-core" target="1.6" />
+      <module name="validator-number" target="1.6" />
+      <module name="validator-test" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>

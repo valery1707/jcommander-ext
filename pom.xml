@@ -32,16 +32,52 @@
 	</issueManagement>
 
 	<modules>
+		<module>validator-test</module>
+		<module>validator-core</module>
+		<module>validator-number</module>
+		<module>validator</module>
 	</modules>
+
+	<properties>
+		<project.encoding>UTF-8</project.encoding>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.6</maven.compiler.source>
+		<maven.compiler.target>1.6</maven.compiler.target>
+	</properties>
 
 	<dependencyManagement>
 		<dependencies>
+			<!--Self-->
+			<dependency>
+				<groupId>name.valery1707</groupId>
+				<artifactId>jcommander-validator-test</artifactId>
+				<version>0.1.0-SNAPSHOT</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>name.valery1707</groupId>
+				<artifactId>jcommander-validator-core</artifactId>
+				<version>0.1.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>name.valery1707</groupId>
+				<artifactId>jcommander-validator-number</artifactId>
+				<version>0.1.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>name.valery1707</groupId>
+				<artifactId>jcommander-validator</artifactId>
+				<version>0.1.0-SNAPSHOT</version>
+			</dependency>
+
+			<!--JCommander-->
 			<dependency>
 				<groupId>com.beust</groupId>
 				<artifactId>jcommander</artifactId>
 				<version>1.64</version>
 			</dependency>
 
+			<!--Test-->
 			<dependency>
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
