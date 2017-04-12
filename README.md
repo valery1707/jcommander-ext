@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/valery1707/jcommander-ext.svg)](https://travis-ci.org/valery1707/jcommander-ext)
+[![Coverage Status](https://coveralls.io/repos/valery1707/jcommander-ext/badge.svg)](https://coveralls.io/r/valery1707/jcommander-ext)
 [![License](https://img.shields.io/github/license/valery1707/jcommander-ext.svg)](http://opensource.org/licenses/MIT)
 
 This library contains many extensions for [JCommander](https://github.com/cbeust/jcommander).
