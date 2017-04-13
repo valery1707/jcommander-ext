@@ -1,6 +1,6 @@
-package name.valery1707.jcommander.validators.number;
+package name.valery1707.jcommander.validators.common;
 
-import name.valery1707.jcommander.validators.number.InRangeDataTest.InRangeSimple;
+import name.valery1707.jcommander.validators.common.InRangeDataTest.InRangeSimple;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;

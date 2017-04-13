@@ -1,4 +1,4 @@
-package name.valery1707.jcommander.validators.number;
+package name.valery1707.jcommander.validators.common;
 
 import name.valery1707.jcommander.validators.ValidatorTest;
 import org.junit.runners.Parameterized;

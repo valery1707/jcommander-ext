@@ -1,8 +1,8 @@
-package name.valery1707.jcommander.validators.number;
+package name.valery1707.jcommander.validators.common;
 
 import name.valery1707.jcommander.validators.ValueChecker;
 
-public class InRange<T extends Number> extends ValueChecker<T> {
+public class InRange<T extends Comparable<T>> extends ValueChecker<T> {
 	//Nullable
 	private final T min;
 	private final boolean minInclusive;
@@ -19,20 +19,21 @@ public class InRange<T extends Number> extends ValueChecker<T> {
 		if (min == null && max == null) {
 			throw new IllegalArgumentException("At least one border must be not null");
 		}
-		if (min != null && max != null && min.doubleValue() > max.doubleValue()) {
+		if (min != null && max != null && min.compareTo(max) > 0) {
 			throw new IllegalArgumentException("Left border must be less ot equal to right border");
 		}
 	}
 
 	@Override
 	protected boolean check(T raw) {
-		double value = raw.doubleValue();
 		boolean valid = true;
 		if (min != null) {
-			valid = minInclusive ? min.doubleValue() <= value : min.doubleValue() < value;
+			int compare = min.compareTo(raw);
+			valid = minInclusive ? compare <= 0 : compare < 0;
 		}
 		if (max != null) {
-			valid = valid && (maxInclusive ? max.doubleValue() >= value : max.doubleValue() > value);
+			int compare = max.compareTo(raw);
+			valid = valid && (maxInclusive ? compare >= 0 : compare > 0);
 		}
 		return valid;
 	}
