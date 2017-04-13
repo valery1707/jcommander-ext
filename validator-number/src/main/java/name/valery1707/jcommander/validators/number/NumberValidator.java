@@ -1,16 +1,17 @@
 package name.valery1707.jcommander.validators.number;
 
-import com.beust.jcommander.IValueValidator;
-import com.beust.jcommander.ParameterException;
+import name.valery1707.jcommander.validators.ValueChecker;
 
-import static name.valery1707.jcommander.validators.ParameterExceptions.invalidParameter;
+public abstract class NumberValidator<T extends Number> extends ValueChecker<T> {
 
-public abstract class NumberValidator<T extends Number> implements IValueValidator<T> {
+	@Override
+	protected boolean check(T value) {
+		return check(value.doubleValue(), other().doubleValue());
+	}
 
-	public void validate(String name, T value) throws ParameterException {
-		if (!check(value.doubleValue(), other().doubleValue())) {
-			throw invalidParameter(name, "must be " + checkDescriptor() + " " + otherDescriptor());
-		}
+	@Override
+	protected String error() {
+		return "be " + checkDescriptor() + " " + otherDescriptor();
 	}
 
 	protected abstract boolean check(double actual, double test);

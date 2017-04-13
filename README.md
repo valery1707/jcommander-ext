@@ -18,6 +18,10 @@ JCommander is command line parsing framework for Java.
   1. `GreaterThanOrEqualToZero`
   1. `LessThanZero`
   1. `LessThanOrEqualToZero`
+1. IO
+  1. Base: `Exists`, `NotExists`
+  1. File: `ExistsFile`, `ExistsFileReadable`, `ExistsFileWritable`, `ExistsFileExecutable`
+  1. Directory: `ExistsDirectory`, `ExistsDirectoryReadable`, `ExistsDirectoryWritable`, `ExistsDirectoryExecutable`
 
 ### Build
 

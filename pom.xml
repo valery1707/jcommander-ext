@@ -35,6 +35,7 @@
 		<module>validator-test</module>
 		<module>validator-core</module>
 		<module>validator-number</module>
+		<module>validator-io</module>
 		<module>validator</module>
 	</modules>
 
@@ -62,6 +63,11 @@
 			<dependency>
 				<groupId>name.valery1707</groupId>
 				<artifactId>jcommander-validator-number</artifactId>
+				<version>0.1.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>name.valery1707</groupId>
+				<artifactId>jcommander-validator-io</artifactId>
 				<version>0.1.0-SNAPSHOT</version>
 			</dependency>
 			<dependency>

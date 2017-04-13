@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="validator" />
         <module name="validator-core" />
+        <module name="validator-io" />
         <module name="validator-number" />
         <module name="validator-test" />
       </profile>
@@ -16,6 +17,7 @@
       <module name="jcommander-ext" target="1.6" />
       <module name="validator" target="1.6" />
       <module name="validator-core" target="1.6" />
+      <module name="validator-io" target="1.6" />
       <module name="validator-number" target="1.6" />
       <module name="validator-test" target="1.6" />
     </bytecodeTargetLevel>
