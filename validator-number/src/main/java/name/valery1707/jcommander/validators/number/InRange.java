@@ -2,7 +2,7 @@ package name.valery1707.jcommander.validators.number;
 
 import name.valery1707.jcommander.validators.ValueChecker;
 
-public abstract class InRange<T extends Number> extends ValueChecker<T> {
+public class InRange<T extends Number> extends ValueChecker<T> {
 	//Nullable
 	private final T min;
 	private final boolean minInclusive;

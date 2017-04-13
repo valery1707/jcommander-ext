@@ -1,16 +1,12 @@
 package name.valery1707.jcommander.validators.number;
 
 import name.valery1707.jcommander.validators.ValidatorTest;
-import org.junit.Test;
 import org.junit.runners.Parameterized;
 
 import java.util.Arrays;
 import java.util.Collection;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
 public class InRangeDataTest extends ValidatorTest<Integer, InRange<Integer>> {
-
 	private final InRange<Integer> validator;
 
 	public InRangeDataTest(InRange<Integer> validator, Integer value, boolean isValid) {
