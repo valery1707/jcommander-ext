@@ -6,7 +6,7 @@ import org.junit.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class ParameterExceptionsTest {
-	@Test(expected = IllegalStateException.class)
+	@Test(expected = UnsupportedOperationException.class)
 	public void createDirectly() throws Exception {
 		new ParameterExceptions();
 	}

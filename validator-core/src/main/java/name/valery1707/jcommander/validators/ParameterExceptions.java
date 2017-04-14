@@ -2,9 +2,10 @@ package name.valery1707.jcommander.validators;
 
 import com.beust.jcommander.ParameterException;
 
+@SuppressWarnings("WeakerAccess")
 public final class ParameterExceptions {
 	ParameterExceptions() {
-		throw new IllegalStateException("Must not be created directly");
+		throw new UnsupportedOperationException("Must not be created directly");
 	}
 
 	public static ParameterException invalidParameter(String parameterName, String errorDescription) {
