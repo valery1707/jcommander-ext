@@ -10,16 +10,16 @@ JCommander is command line parsing framework for Java.
 ### Validators
 
 1. Common
-  1. Range: `InRange`, `NotInRange`
+    1. Range: `InRange`, `NotInRange`
 1. Number
-  1. Equal: `EqualTo`, `NotEqualTo`
-  1. Greater: `GreaterThan`, `GreaterThanOrEqualTo`
-  1. Less: `LessThan`, `LessThanOrEqualTo`
-  1. Zero-compare: `EqualToZero`, `NotEqualToZero`, `GreaterThanZero`, `GreaterThanOrEqualToZero`, `LessThanZero`, `LessThanOrEqualToZero`
+    1. Equal: `EqualTo`, `NotEqualTo`
+    1. Greater: `GreaterThan`, `GreaterThanOrEqualTo`
+    1. Less: `LessThan`, `LessThanOrEqualTo`
+    1. Zero-compare: `EqualToZero`, `NotEqualToZero`, `GreaterThanZero`, `GreaterThanOrEqualToZero`, `LessThanZero`, `LessThanOrEqualToZero`
 1. IO
-  1. Base: `Exists`, `NotExists`
-  1. File: `ExistsFile`, `ExistsFileReadable`, `ExistsFileWritable`, `ExistsFileExecutable`
-  1. Directory: `ExistsDirectory`, `ExistsDirectoryReadable`, `ExistsDirectoryWritable`, `ExistsDirectoryExecutable`
+    1. Base: `Exists`, `NotExists`
+    1. File: `ExistsFile`, `ExistsFileReadable`, `ExistsFileWritable`, `ExistsFileExecutable`
+    1. Directory: `ExistsDirectory`, `ExistsDirectoryReadable`, `ExistsDirectoryWritable`, `ExistsDirectoryExecutable`
 
 ### Build
 
