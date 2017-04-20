@@ -1,9 +1,11 @@
 docker:
-  image: "iron/java:1.8"
+  image: yegor256/java8
 decrypt:
   settings.xml: "repo/.rultor/settings.xml.asc"
   pubring.gpg: "repo/.rultor/pubring.gpg.asc"
   secring.gpg: "repo/.rultor/secring.gpg.asc"
+install: |-
+  java -version
 deploy:
   script: |
     if [ "${version}" = "" ] ; then
