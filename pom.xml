@@ -57,6 +57,9 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.6</maven.compiler.source>
 		<maven.compiler.target>1.6</maven.compiler.target>
+		<github.tag></github.tag>
+		<github.releaseName></github.releaseName>
+		<github.description></github.description>
 	</properties>
 
 	<dependencyManagement>
@@ -135,16 +138,25 @@
 				<artifactId>coveralls-maven-plugin</artifactId>
 				<version>4.3.0</version>
 			</plugin>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>versions-maven-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<generateBackupPoms>false</generateBackupPoms>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
 	<distributionManagement>
 		<snapshotRepository>
-			<id>ossrh</id>
+			<id>oss.sonatype.org</id>
 			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
 		</snapshotRepository>
 		<repository>
-			<id>ossrh</id>
+			<id>oss.sonatype.org</id>
 			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
 		</repository>
 	</distributionManagement>
@@ -195,6 +207,57 @@
 								</goals>
 							</execution>
 						</executions>
+					</plugin>
+
+					<plugin>
+						<artifactId>maven-deploy-plugin</artifactId>
+						<version>2.8.2</version>
+						<configuration>
+							<skip>true</skip>
+						</configuration>
+					</plugin>
+					<plugin>
+						<groupId>org.sonatype.plugins</groupId>
+						<artifactId>nexus-staging-maven-plugin</artifactId>
+						<version>1.6.8</version>
+						<extensions>true</extensions>
+						<configuration>
+							<serverId>oss.sonatype.org</serverId>
+							<nexusUrl>https://oss.sonatype.org/</nexusUrl>
+							<description>${project.version}</description>
+						</configuration>
+						<executions>
+							<execution>
+								<id>deploy-to-sonatype</id>
+								<phase>deploy</phase>
+								<goals>
+									<goal>deploy</goal>
+									<goal>release</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+
+					<plugin>
+						<groupId>de.jutzig</groupId>
+						<artifactId>github-release-plugin</artifactId>
+						<version>1.2.0</version>
+						<configuration>
+							<serverId>github</serverId>
+							<description>${github.description}</description>
+							<releaseName>${github.releaseName}</releaseName>
+							<tag>${github.tag}</tag>
+							<fileSets>
+								<fileSet>
+									<directory>${project.basedir}</directory>
+									<includes>
+										<include>**/jcommander-*.jar</include>
+										<include>**/jcommander-*.pom</include>
+										<include>**/jcommander-*.asc</include>
+									</includes>
+								</fileSet>
+							</fileSets>
+						</configuration>
 					</plugin>
 				</plugins>
 			</build>
