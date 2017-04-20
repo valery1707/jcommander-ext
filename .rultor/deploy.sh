@@ -29,6 +29,8 @@ echo "Release version: ${version}"
 echo "Next version: ${next}"
 echo "Changelog: ${changelog}"
 echo "GPG: md5($(echo ${gpg_pass} | md5sum)), length(${#gpg_pass})"
+gpg --list-keys --quiet
+cp ../pubring.gpg ../secring.gpg ${HOME}/.gnupg
 gpg --list-keys
 git status
 exit 1
