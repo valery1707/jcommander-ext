@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+version=${tag}
 # Release version
 if [ "${version}" = "" ] ; then
   version=$(cat pom.xml | grep --extended-regexp --regexp="<version>[0-9.]+(-SNAPSHOT)?</version>" | head -n1 | sed -r 's_.*<version>([0-9.]+)(-SNAPSHOT)?</version>.*_\1_')
