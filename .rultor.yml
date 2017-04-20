@@ -8,5 +8,4 @@ install: |-
   java -version
 deploy:
   script: |
-    cat /home/r/script.sh
     bash .rultor/deploy.sh

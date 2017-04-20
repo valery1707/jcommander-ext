@@ -27,7 +27,8 @@ gpg_pass=$(cat ../settings.xml | grep 'gpg.passphrase' | grep --only-matching '>
 echo "Release version: ${version}"
 echo "Next version: ${next}"
 echo "Changelog: ${changelog}"
-echo "GPG: $(echo ${gpg_pass} | md5sum)"
+echo "GPG: md5($(echo ${gpg_pass} | md5sum)), length(${#gpg_pass})"
+gpg --list-keys
 git status
 exit 1
 
