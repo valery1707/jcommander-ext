@@ -42,12 +42,13 @@ mvn versions:set "-DnewVersion=${version}"
 # Build and sign
 mvn clean install -P release -Dgpg.passphrase=${gpg_pass}
 
-# Test
-exit 1
-
 # Commit and tag
 git commit -am "Release version ${version}"
 git tag --local-user='valery1707@gmail.com' -m "Release version ${version}" v${version}
+
+# Test
+echo "Exit from script"
+exit 1
 
 # Deploy artifact to Maven Central
 mvn deploy -P release --settings ../settings.xml
