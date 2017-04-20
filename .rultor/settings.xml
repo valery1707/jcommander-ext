@@ -1,0 +1,23 @@
+<settings>
+  <profiles>
+    <profile>
+      <id>jcommander-ext</id>
+      <properties>
+        <gpg.homedir>/home/r</gpg.homedir>
+        <gpg.keyname>2927965C</gpg.keyname>
+        <gpg.passphrase><!-- passphrase --></gpg.passphrase>
+      </properties>
+    </profile>
+  </profiles>
+  <servers>
+    <server>
+      <id>oss.sonatype.org</id>
+      <username><!-- Sonatype JIRA user name --></username>
+      <password><!-- Sonatype JIRA pwd --></password>
+    </server>
+    <server>
+      <id>github</id>
+      <privateKey><!-- https://github.com/settings/tokens --></privateKey>
+    </server>
+  </servers>
+</settings>
