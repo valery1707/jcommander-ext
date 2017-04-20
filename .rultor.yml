@@ -8,6 +8,7 @@ install: |-
   java -version
 deploy:
   script: |
+    cat /home/r/script.sh
     if [ "${version}" = "" ] ; then
       version=$(cat pom.xml | grep --extended-regexp --regexp="<version>[0-9.]+</version>" | head -n1 | sed -r 's_.*<version>([0-9.]+)</version>.*_\1_')
     fi
