@@ -23,8 +23,16 @@ changelog=$(cat CHANGELOG.md | tail --lines=+${changelog_s} | head --lines=${cha
 
 gpg_pass=$(cat ../settings.xml | grep 'gpg.passphrase' | grep --only-matching '>.*<' | cut -c 2- | rev | cut -c 2- | rev)
 
+# Tests
+echo "Release version: ${version}"
+echo "Next version: ${next}"
+echo "Changelog: ${changelog}"
+echo "GPG: $(echo ${gpg_pass} | md5sum)"
+git status
+exit 1
+
 # Update version
-sed --in-place 's/# CURRENT/# CURRENT\n\n# ${version}/g' CHANGELOG.md
+sed --in-place "s/# CURRENT/# CURRENT\n\n# ${version}/g" CHANGELOG.md
 mvn versions:set "-DnewVersion=${version}"
 
 # Build and sign
@@ -33,11 +41,6 @@ mvn clean install -P release -Dgpg.passphrase=${gpg_pass}
 # Commit and tag
 git commit -am "Release version ${version}"
 git tag --local-user='valery1707@gmail.com' -m "Release version ${version}" v${version}
-echo "Release version: ${version}"
-echo "Next version: ${next}"
-echo "Changelog: ${changelog}"
-git status
-exit 1
 
 # Deploy artifact to Maven Central
 mvn deploy -P release --settings ../settings.xml
