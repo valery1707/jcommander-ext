@@ -29,11 +29,11 @@ echo "Release version: ${version}"
 echo "Next version: ${next}"
 echo "Changelog: ${changelog}"
 echo "GPG: md5($(echo ${gpg_pass} | md5sum)), length(${#gpg_pass})"
+
+# GPG
 gpg --list-keys --quiet
 cp ../pubring.gpg ../secring.gpg ${HOME}/.gnupg
 gpg --list-keys
-git status
-exit 1
 
 # Update version
 sed --in-place "s/# CURRENT/# CURRENT\n\n# ${version}/g" CHANGELOG.md
@@ -41,6 +41,9 @@ mvn versions:set "-DnewVersion=${version}"
 
 # Build and sign
 mvn clean install -P release -Dgpg.passphrase=${gpg_pass}
+
+# Test
+exit 1
 
 # Commit and tag
 git commit -am "Release version ${version}"
