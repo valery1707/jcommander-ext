@@ -32,8 +32,14 @@ echo "GPG: md5($(echo ${gpg_pass} | md5sum)), length(${#gpg_pass})"
 
 # GPG
 gpg --list-keys --quiet
-cp ../pubring.gpg ../secring.gpg ${HOME}/.gnupg
+gpg_home=${HOME}/.gnupg
+gpg_conf=${gpg_home}/gpg.conf
+cp ../pubring.gpg ../secring.gpg ${gpg_home}
 gpg --list-keys
+echo "no-use-agent" >> ${gpg_conf}
+echo "batch" >> ${gpg_conf}
+echo "no-tty" >> ${gpg_conf}
+echo "passphrase ${gpg_pass}" >> ${gpg_conf}
 
 # Update version
 sed --in-place "s/# CURRENT/# CURRENT\n\n# ${version}/g" CHANGELOG.md
@@ -47,6 +53,7 @@ git commit -am "Release version ${version}"
 git tag --local-user='valery1707@gmail.com' -m "Release version ${version}" v${version}
 
 # Test
+git tag -v v${version}
 echo "Exit from script"
 exit 1
 
