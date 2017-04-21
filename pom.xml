@@ -255,6 +255,9 @@
 										<include>**/jcommander-*.pom</include>
 										<include>**/jcommander-*.asc</include>
 									</includes>
+									<excludes>
+										<exclude>**/jcommander-*-test-*.*</exclude>
+									</excludes>
 								</fileSet>
 							</fileSets>
 						</configuration>
