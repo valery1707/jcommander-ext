@@ -41,6 +41,13 @@ echo "batch" >> ${gpg_conf}
 echo "no-tty" >> ${gpg_conf}
 echo "passphrase ${gpg_pass}" >> ${gpg_conf}
 
+# SSH
+mkdir -p ~/.ssh
+echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+chmod 600 ~/.ssh/config
+echo "SSH config:"
+cat ~/.ssh/config
+
 # Update version
 sed --in-place "s/# CURRENT/# CURRENT\n\n# ${version}/g" CHANGELOG.md
 mvn --batch-mode versions:set "-DnewVersion=${version}"
