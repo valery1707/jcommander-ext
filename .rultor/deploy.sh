@@ -37,10 +37,10 @@ gpg --list-keys
 
 # Update version
 sed --in-place "s/# CURRENT/# CURRENT\n\n# ${version}/g" CHANGELOG.md
-mvn versions:set "-DnewVersion=${version}"
+mvn --batch-mode versions:set "-DnewVersion=${version}"
 
 # Build and sign
-mvn clean install -P release -Dgpg.passphrase=${gpg_pass}
+mvn --batch-mode clean install -P release -Dgpg.passphrase=${gpg_pass}
 
 # Commit and tag
 git commit -am "Release version ${version}"
@@ -51,10 +51,10 @@ echo "Exit from script"
 exit 1
 
 # Deploy artifact to Maven Central
-mvn deploy -P release --settings ../settings.xml
+mvn --batch-mode deploy -P release --settings ../settings.xml
 
 # Next development iteration
-mvn versions:set "-DnewVersion=${next}-SNAPSHOT"
+mvn --batch-mode versions:set "-DnewVersion=${next}-SNAPSHOT"
 git commit -am "Prepare for next development iteration"
 
 # Push
@@ -62,4 +62,4 @@ git push --all origin
 git push --tags origin
 
 # Update Github release
-mvn github-release-plugin:release -P release --settings ../settings.xml -Dgithub.tag="${version}" -Dgithub.releaseName="v${version}" -Dgithub.description="${changelog}"
+mvn --batch-mode github-release-plugin:release -P release --settings ../settings.xml -Dgithub.tag="${version}" -Dgithub.releaseName="v${version}" -Dgithub.description="${changelog}"
