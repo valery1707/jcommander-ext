@@ -72,4 +72,5 @@ git push --all origin
 git push --tags origin
 
 # Update Github release
+exit 0
 mvn --batch-mode de.jutzig:github-release-plugin:release -P release --settings ../settings.xml --projects . -Dgithub.tag="v${version}" -Dgithub.releaseName="v${version}" -Dgithub.description="${changelog}"
