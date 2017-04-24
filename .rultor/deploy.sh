@@ -28,7 +28,6 @@ gpg_pass=$(cat ../settings.xml | grep 'gpg.passphrase' | grep --only-matching '>
 echo "Release version: ${version}"
 echo "Next version: ${next}"
 echo "Changelog: ${changelog}"
-echo "GPG: md5($(echo ${gpg_pass} | md5sum)), length(${#gpg_pass})"
 
 # GPG
 gpg --list-keys --quiet
@@ -44,7 +43,8 @@ echo "passphrase ${gpg_pass}" >> ${gpg_conf}
 # SSH
 mkdir -p ~/.ssh
 echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-chmod 600 ~/.ssh/config
+mv -v ../id_rsa ../id_rsa.pub ~/.ssh
+chmod -R 600 ~/.ssh/*
 echo "SSH config:"
 cat ~/.ssh/config
 

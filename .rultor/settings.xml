@@ -20,4 +20,5 @@
       <privateKey><!-- https://github.com/settings/tokens --></privateKey>
     </server>
   </servers>
+  <!-- ssh-keygen -f .rultor/github-deploy.key -N '' -->
 </settings>
