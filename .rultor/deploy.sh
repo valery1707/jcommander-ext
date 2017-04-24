@@ -58,7 +58,6 @@ mvn --batch-mode clean install -P release -Dgpg.passphrase=${gpg_pass}
 # Commit and tag
 git commit -am "Release version ${version}"
 git tag --local-user='valery1707@gmail.com' -m "Release version ${version}" v${version}
-git tag -v v${version}
 
 # Deploy artifact to Maven Central
 mvn --batch-mode deploy -P release -Dmaven.test.skip=true -Dgpg.passphrase=${gpg_pass} --settings ../settings.xml
@@ -69,8 +68,8 @@ git commit -am "Prepare for next development iteration"
 
 # Push
 git push --all origin
-git push --tags origin
+git tag --verify v${version}
+git push --verbose --tags origin
 
 # Update Github release
-exit 0
 mvn --batch-mode de.jutzig:github-release-plugin:release -P release --settings ../settings.xml --projects . -Dgithub.tag="v${version}" -Dgithub.releaseName="v${version}" -Dgithub.description="${changelog}"
