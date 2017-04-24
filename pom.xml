@@ -6,7 +6,7 @@
 
 	<groupId>name.valery1707</groupId>
 	<artifactId>jcommander-ext</artifactId>
-	<version>0.1.11</version>
+	<version>0.2.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>JCommander extension library</name>
@@ -68,28 +68,28 @@
 			<dependency>
 				<groupId>name.valery1707</groupId>
 				<artifactId>jcommander-validator-test</artifactId>
-				<version>0.1.11</version>
+				<version>0.2.0-SNAPSHOT</version>
 				<scope>test</scope>
 			</dependency>
 			<dependency>
 				<groupId>name.valery1707</groupId>
 				<artifactId>jcommander-validator-core</artifactId>
-				<version>0.1.11</version>
+				<version>0.2.0-SNAPSHOT</version>
 			</dependency>
 			<dependency>
 				<groupId>name.valery1707</groupId>
 				<artifactId>jcommander-validator-number</artifactId>
-				<version>0.1.11</version>
+				<version>0.2.0-SNAPSHOT</version>
 			</dependency>
 			<dependency>
 				<groupId>name.valery1707</groupId>
 				<artifactId>jcommander-validator-io</artifactId>
-				<version>0.1.11</version>
+				<version>0.2.0-SNAPSHOT</version>
 			</dependency>
 			<dependency>
 				<groupId>name.valery1707</groupId>
 				<artifactId>jcommander-validator</artifactId>
-				<version>0.1.11</version>
+				<version>0.2.0-SNAPSHOT</version>
 			</dependency>
 
 			<!--JCommander-->
