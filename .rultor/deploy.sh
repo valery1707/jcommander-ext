@@ -59,9 +59,13 @@ mvn --batch-mode clean install -P release -Dgpg.passphrase=${gpg_pass}
 git commit -am "Release version ${version}"
 GIT_AUTHOR_NAME='Valeriy.Vyrva'
 GIT_AUTHOR_EMAIL='valery1707@gmail.com'
+GIT_COMMITTER_NAME='Valeriy.Vyrva'
+GIT_COMMITTER_EMAIL='valery1707@gmail.com'
 git tag --local-user='valery1707@gmail.com' -m "Release version ${version}" v${version}
 unset GIT_AUTHOR_NAME
 unset GIT_AUTHOR_EMAIL
+unset GIT_COMMITTER_NAME
+unset GIT_COMMITTER_EMAIL
 
 # Deploy artifact to Maven Central
 mvn --batch-mode deploy -P release -Dmaven.test.skip=true -Dgpg.passphrase=${gpg_pass} --settings ../settings.xml
