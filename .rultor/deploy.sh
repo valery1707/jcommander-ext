@@ -20,6 +20,9 @@ changelog_f=$(grep -E -e '# [0-9.]+' -n CHANGELOG.md | cut -d ':' -f1 | head --l
 changelog_s=$[${changelog_s} + 2]
 changelog_f=$[${changelog_f} - 1]
 changelog_l=$[${changelog_f} - ${changelog_s}]
+if [ "${changelog_l}" -lt "0" ] ; then
+  changelog_l=0
+fi
 changelog=$(cat CHANGELOG.md | tail --lines=+${changelog_s} | head --lines=${changelog_l})
 
 gpg_pass=$(cat ../settings.xml | grep 'gpg.passphrase' | grep --only-matching '>.*<' | cut -c 2- | rev | cut -c 2- | rev)
