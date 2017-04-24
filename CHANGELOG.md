@@ -2,6 +2,8 @@ Change log for releases.
 
 # CURRENT
 
+# 0.1.5
+
 # 0.1.4
 
 * Deploy artifacts with [Rultor](http://doc.rultor.com/)
