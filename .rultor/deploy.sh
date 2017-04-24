@@ -60,7 +60,7 @@ git commit -am "Release version ${version}"
 git tag --local-user='valery1707@gmail.com' -m "Release version ${version}" v${version}
 
 # Deploy artifact to Maven Central
-mvn --batch-mode deploy -P release -Dgpg.passphrase=${gpg_pass} --settings ../settings.xml
+mvn --batch-mode deploy -P release -Dmaven.test.skip=true -Dgpg.passphrase=${gpg_pass} --settings ../settings.xml
 
 # Next development iteration
 mvn --batch-mode versions:set "-DnewVersion=${next}-SNAPSHOT"
