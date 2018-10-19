@@ -1,8 +1,10 @@
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/name.valery1707/jcommander-ext/badge.svg)](https://maven-badges.herokuapp.com/maven-central/name.valery1707/jcommander-ext)
+[![License](https://img.shields.io/github/license/valery1707/jcommander-ext.svg)](http://opensource.org/licenses/MIT)
+
 [![Build Status](https://travis-ci.org/valery1707/jcommander-ext.svg)](https://travis-ci.org/valery1707/jcommander-ext)
 [![Coverage Status](https://coveralls.io/repos/valery1707/jcommander-ext/badge.svg)](https://coveralls.io/r/valery1707/jcommander-ext)
 
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/name.valery1707/jcommander-ext/badge.svg)](https://maven-badges.herokuapp.com/maven-central/name.valery1707/jcommander-ext)
-[![License](https://img.shields.io/github/license/valery1707/jcommander-ext.svg)](http://opensource.org/licenses/MIT)
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/valery1707/jcommander-ext.svg?columns=all)](https://waffle.io/valery1707/jcommander-ext)
 
 [JCommander](https://github.com/cbeust/jcommander) is very good command line parsing framework for Java.
 
