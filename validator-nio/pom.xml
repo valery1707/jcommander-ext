@@ -10,22 +10,29 @@
 		<version>0.2.0-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>jcommander-validator</artifactId>
+	<artifactId>jcommander-validator-nio</artifactId>
 	<version>0.2.0-SNAPSHOT</version>
-	<description>Meta artifact with all validators</description>
+	<description>Validator for nio (files, etc.)</description>
+
+	<properties>
+		<maven.compiler.source>1.7</maven.compiler.source>
+		<maven.compiler.target>1.7</maven.compiler.target>
+	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>name.valery1707</groupId>
-			<artifactId>jcommander-validator-number</artifactId>
+			<artifactId>jcommander-validator-core</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>name.valery1707</groupId>
-			<artifactId>jcommander-validator-io</artifactId>
+			<artifactId>jcommander-validator-test</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>name.valery1707</groupId>
-			<artifactId>jcommander-validator-nio</artifactId>
+			<groupId>com.github.marschall</groupId>
+			<artifactId>memoryfilesystem</artifactId>
+			<version>1.2.2</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 </project>

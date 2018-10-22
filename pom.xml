@@ -49,6 +49,7 @@
 		<module>validator-core</module>
 		<module>validator-number</module>
 		<module>validator-io</module>
+		<module>validator-nio</module>
 		<module>validator</module>
 	</modules>
 
@@ -84,6 +85,11 @@
 			<dependency>
 				<groupId>name.valery1707</groupId>
 				<artifactId>jcommander-validator-io</artifactId>
+				<version>0.2.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>name.valery1707</groupId>
+				<artifactId>jcommander-validator-nio</artifactId>
 				<version>0.2.0-SNAPSHOT</version>
 			</dependency>
 			<dependency>
