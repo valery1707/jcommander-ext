@@ -21,6 +21,10 @@
 		</dependency>
 		<dependency>
 			<groupId>name.valery1707</groupId>
+			<artifactId>jcommander-validator-string</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>name.valery1707</groupId>
 			<artifactId>jcommander-validator-io</artifactId>
 		</dependency>
 	</dependencies>
