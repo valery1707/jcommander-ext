@@ -24,19 +24,21 @@ public class NotInCollectionDataTest extends ValidatorTest<Integer, NotInCollect
 	public static Collection<Object[]> data() {
 		return asList(new Object[][]{
 				//[]
-				{new NotInCollection<Integer>(list()), 0, true},
+				{new NotInCollectionSimple(), 0, true},
 				//[1]
-				{new NotInCollection<Integer>(list(1)), 0, true},
-				{new NotInCollection<Integer>(list(1)), 1, false},
+				{new NotInCollectionSimple(1), 0, true},
+				{new NotInCollectionSimple(1), 1, false},
 				//[1, 3]
-				{new NotInCollection<Integer>(list(1, 3)), 0, true},
-				{new NotInCollection<Integer>(list(1, 3)), 1, false},
-				{new NotInCollection<Integer>(list(1, 3)), 2, true},
-				{new NotInCollection<Integer>(list(1, 3)), 3, false},
+				{new NotInCollectionSimple(1, 3), 0, true},
+				{new NotInCollectionSimple(1, 3), 1, false},
+				{new NotInCollectionSimple(1, 3), 2, true},
+				{new NotInCollectionSimple(1, 3), 3, false},
 		});
 	}
 
-	private static Collection<Integer> list(Integer... values) {
-		return asList(values);
+	public static class NotInCollectionSimple extends NotInCollection<Integer> {
+		NotInCollectionSimple(Integer... collection) {
+			super(collection);
+		}
 	}
 }

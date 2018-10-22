@@ -1,8 +1,10 @@
 package name.valery1707.jcommander.validators;
 
-public class NotChecker<T> extends ValueChecker<T> {
+@SuppressWarnings("WeakerAccess")
+public abstract class NotChecker<T> extends ValueChecker<T> {
 	private final ValueChecker<T> checker;
 
+	@SuppressWarnings("WeakerAccess")
 	protected NotChecker(ValueChecker<T> checker) {
 		this.checker = checker;
 	}
