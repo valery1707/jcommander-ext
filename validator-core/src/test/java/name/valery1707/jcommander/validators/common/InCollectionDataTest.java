@@ -24,19 +24,21 @@ public class InCollectionDataTest extends ValidatorTest<Integer, InCollection<In
 	public static Collection<Object[]> data() {
 		return asList(new Object[][]{
 				//[]
-				{new InCollection<Integer>(list()), 0, false},
+				{new InCollectionSimple(), 0, false},
 				//[1]
-				{new InCollection<Integer>(list(1)), 0, false},
-				{new InCollection<Integer>(list(1)), 1, true},
+				{new InCollectionSimple(1), 0, false},
+				{new InCollectionSimple(1), 1, true},
 				//[1, 3]
-				{new InCollection<Integer>(list(1, 3)), 0, false},
-				{new InCollection<Integer>(list(1, 3)), 1, true},
-				{new InCollection<Integer>(list(1, 3)), 2, false},
-				{new InCollection<Integer>(list(1, 3)), 3, true},
+				{new InCollectionSimple(1, 3), 0, false},
+				{new InCollectionSimple(1, 3), 1, true},
+				{new InCollectionSimple(1, 3), 2, false},
+				{new InCollectionSimple(1, 3), 3, true},
 		});
 	}
 
-	private static Collection<Integer> list(Integer... values) {
-		return asList(values);
+	public static class InCollectionSimple extends InCollection<Integer> {
+		InCollectionSimple(Integer... collection) {
+			super(collection);
+		}
 	}
 }

@@ -2,6 +2,7 @@ Change log for releases.
 
 # CURRENT
 
+* Add string validators
 * Add NIO validators
 
 # 0.1.11

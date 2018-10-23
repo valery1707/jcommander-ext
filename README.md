@@ -1,8 +1,10 @@
-[![Build Status](https://travis-ci.org/valery1707/jcommander-ext.svg)](https://travis-ci.org/valery1707/jcommander-ext)
-[![Coverage Status](https://coveralls.io/repos/valery1707/jcommander-ext/badge.svg)](https://coveralls.io/r/valery1707/jcommander-ext)
-
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/name.valery1707/jcommander-ext/badge.svg)](https://maven-badges.herokuapp.com/maven-central/name.valery1707/jcommander-ext)
 [![License](https://img.shields.io/github/license/valery1707/jcommander-ext.svg)](http://opensource.org/licenses/MIT)
+
+[![Build Status](https://travis-ci.org/valery1707/jcommander-ext.svg?branch=master)](https://travis-ci.org/valery1707/jcommander-ext)
+[![Coverage Status](https://coveralls.io/repos/github/valery1707/jcommander-ext/badge.svg?branch=master)](https://coveralls.io/github/valery1707/jcommander-ext?branch=master)
+
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/valery1707/jcommander-ext.svg?columns=all)](https://waffle.io/valery1707/jcommander-ext)
 
 [JCommander](https://github.com/cbeust/jcommander) is very good command line parsing framework for Java.
 
@@ -35,6 +37,9 @@ Validators list:
     1. Greater: `GreaterThan`, `GreaterThanOrEqualTo`
     1. Less: `LessThan`, `LessThanOrEqualTo`
     1. Zero-compare: `EqualToZero`, `NotEqualToZero`, `GreaterThanZero`, `GreaterThanOrEqualToZero`, `LessThanZero`, `LessThanOrEqualToZero`
+1. [String](http://www.javadoc.io/doc/name.valery1707/jcommander-validator-string)
+	1. Simple: `NotBlank`, `NotEmpty`
+	1. Pattern based: `PatternContains`, `PatternNotContains`, `PatternMatched`, `PatternNotMatched`
 1. [IO](http://www.javadoc.io/doc/name.valery1707/jcommander-validator-io)
     1. Base: `Exists`, `NotExists`
     1. File: `ExistsFile`, `ExistsFileReadable`, `ExistsFileWritable`, `ExistsFileExecutable`
