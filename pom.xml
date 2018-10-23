@@ -159,7 +159,43 @@
 					<generateBackupPoms>false</generateBackupPoms>
 				</configuration>
 			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-install-plugin</artifactId>
+				<version>2.5.2</version>
+				<configuration>
+					<!--Still not worked for unknown reason. Use separate plugin for checksum generation.-->
+					<createChecksum>true</createChecksum>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>net.nicoulaj.maven.plugins</groupId>
+				<artifactId>checksum-maven-plugin</artifactId>
+			</plugin>
 		</plugins>
+
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>net.nicoulaj.maven.plugins</groupId>
+					<artifactId>checksum-maven-plugin</artifactId>
+					<version>1.8</version>
+					<executions>
+						<execution>
+							<goals>
+								<goal>artifacts</goal>
+							</goals>
+						</execution>
+					</executions>
+					<configuration>
+						<!--Root project don't have any artifact-->
+						<failOnError>false</failOnError>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
 	</build>
 
 	<distributionManagement>
@@ -195,7 +231,7 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-javadoc-plugin</artifactId>
-						<version>2.10.4</version>
+						<version>3.0.1</version>
 						<executions>
 							<execution>
 								<id>attach-javadocs</id>
