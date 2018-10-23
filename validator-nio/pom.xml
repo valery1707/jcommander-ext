@@ -7,11 +7,11 @@
 	<parent>
 		<groupId>name.valery1707</groupId>
 		<artifactId>jcommander-ext</artifactId>
-		<version>0.1.13</version>
+		<version>0.2.0-SNAPSHOT</version>
 	</parent>
 
 	<artifactId>jcommander-validator-nio</artifactId>
-	<version>0.1.13</version>
+	<version>0.2.0-SNAPSHOT</version>
 	<description>Validator for nio (files, etc.)</description>
 
 	<properties>
