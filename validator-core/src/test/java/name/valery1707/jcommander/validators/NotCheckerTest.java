@@ -13,7 +13,7 @@ public class NotCheckerTest extends ValidatorTest<Boolean, NotChecker<Boolean>> 
 
 	@Override
 	protected NotChecker<Boolean> createValidator() {
-		return new NotChecker<Boolean>(new BooleanChecker());
+		return new NotCheckerSimple();
 	}
 
 	@Parameterized.Parameters
@@ -22,5 +22,11 @@ public class NotCheckerTest extends ValidatorTest<Boolean, NotChecker<Boolean>> 
 				{false, true},
 				{true, false},
 		});
+	}
+
+	public static class NotCheckerSimple extends NotChecker<Boolean> {
+		public NotCheckerSimple() {
+			super(new BooleanChecker());
+		}
 	}
 }
