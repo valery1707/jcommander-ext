@@ -3,6 +3,7 @@
 
 [![Build Status](https://travis-ci.org/valery1707/jcommander-ext.svg?branch=master)](https://travis-ci.org/valery1707/jcommander-ext)
 [![Coverage Status](https://coveralls.io/repos/github/valery1707/jcommander-ext/badge.svg?branch=master)](https://coveralls.io/github/valery1707/jcommander-ext?branch=master)
+[![CodeBeat badge](https://codebeat.co/badges/5cf75d4f-dcc4-4141-abe3-1cbfb54b1407)](https://codebeat.co/projects/github-com-valery1707-jcommander-ext-master)
 
 [![Waffle.io - Columns and their card count](https://badge.waffle.io/valery1707/jcommander-ext.svg?columns=all)](https://waffle.io/valery1707/jcommander-ext)
 
