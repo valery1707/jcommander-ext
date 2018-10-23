@@ -39,6 +39,11 @@ Validators list:
     1. Base: `Exists`, `NotExists`
     1. File: `ExistsFile`, `ExistsFileReadable`, `ExistsFileWritable`, `ExistsFileExecutable`
     1. Directory: `ExistsDirectory`, `ExistsDirectoryReadable`, `ExistsDirectoryWritable`, `ExistsDirectoryExecutable`
+1. [NIO](http://www.javadoc.io/doc/name.valery1707/jcommander-validator-nio)
+    1. Base: `Exists`, `NotExists`
+    1. File: `ExistsFile`, `ExistsFileReadable`, `ExistsFileWritable`, `ExistsFileExecutable`
+    1. Directory: `ExistsDirectory`, `ExistsDirectoryReadable`, `ExistsDirectoryWritable`, `ExistsDirectoryExecutable`
+    1. Link: `ExistsLink`, `ExistsLinkReadable`, `ExistsLinkWritable`, `ExistsLinkExecutable`
 
 ### Build
 

@@ -2,6 +2,8 @@ Change log for releases.
 
 # CURRENT
 
+* Add NIO validators
+
 # 0.1.11
 
 # 0.1.10
