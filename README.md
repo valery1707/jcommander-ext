@@ -1,8 +1,8 @@
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/name.valery1707/jcommander-ext/badge.svg)](https://maven-badges.herokuapp.com/maven-central/name.valery1707/jcommander-ext)
 [![License](https://img.shields.io/github/license/valery1707/jcommander-ext.svg)](http://opensource.org/licenses/MIT)
 
-[![Build Status](https://travis-ci.org/valery1707/jcommander-ext.svg)](https://travis-ci.org/valery1707/jcommander-ext)
-[![Coverage Status](https://coveralls.io/repos/valery1707/jcommander-ext/badge.svg)](https://coveralls.io/r/valery1707/jcommander-ext)
+[![Build Status](https://travis-ci.org/valery1707/jcommander-ext.svg?branch=master)](https://travis-ci.org/valery1707/jcommander-ext)
+[![Coverage Status](https://coveralls.io/repos/github/valery1707/jcommander-ext/badge.svg?branch=master)](https://coveralls.io/github/valery1707/jcommander-ext?branch=master)
 
 [![Waffle.io - Columns and their card count](https://badge.waffle.io/valery1707/jcommander-ext.svg?columns=all)](https://waffle.io/valery1707/jcommander-ext)
 
