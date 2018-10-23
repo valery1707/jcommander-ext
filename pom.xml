@@ -305,6 +305,7 @@
 									</includes>
 									<excludes>
 										<exclude>**/jcommander-*-test-*.*</exclude>
+										<exclude>**/staging/**</exclude>
 									</excludes>
 								</fileSet>
 							</fileSets>
