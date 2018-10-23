@@ -32,7 +32,7 @@ public abstract class ValidatorTest<T, V extends IValueValidator<T>> {
 
 	@Test
 	public void checkData() throws Exception {
-		Description description = new TextDescription("Validator must %s value %s", (isValid ? "accept" : "decline"), String.valueOf(value));
+		Description description = new TextDescription("Validator must %s value '%s'", (isValid ? "accept" : "decline"), String.valueOf(value));
 		try {
 			validator.validate("-check", value);
 			assertThat(isValid)

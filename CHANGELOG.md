@@ -2,6 +2,8 @@ Change log for releases.
 
 # CURRENT
 
+* Add string validators
+
 # 0.1.11
 
 # 0.1.10

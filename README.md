@@ -37,6 +37,9 @@ Validators list:
     1. Greater: `GreaterThan`, `GreaterThanOrEqualTo`
     1. Less: `LessThan`, `LessThanOrEqualTo`
     1. Zero-compare: `EqualToZero`, `NotEqualToZero`, `GreaterThanZero`, `GreaterThanOrEqualToZero`, `LessThanZero`, `LessThanOrEqualToZero`
+1. [String](http://www.javadoc.io/doc/name.valery1707/jcommander-validator-string)
+	1. Simple: `NotBlank`, `NotEmpty`
+	1. Pattern based: `PatternContains`, `PatternNotContains`, `PatternMatched`, `PatternNotMatched`
 1. [IO](http://www.javadoc.io/doc/name.valery1707/jcommander-validator-io)
     1. Base: `Exists`, `NotExists`
     1. File: `ExistsFile`, `ExistsFileReadable`, `ExistsFileWritable`, `ExistsFileExecutable`
