@@ -7,12 +7,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class ParameterExceptionsTest {
 	@Test(expected = UnsupportedOperationException.class)
-	public void createDirectly() throws Exception {
+	public void createDirectly() {
 		new ParameterExceptions();
 	}
 
 	@Test
-	public void shouldThrow() throws Exception {
+	public void shouldThrow() {
 		assertThat(ParameterExceptions.invalidParameter("name", "desc"))
 				.isInstanceOf(ParameterException.class)
 				.hasMessageContaining("'name'")

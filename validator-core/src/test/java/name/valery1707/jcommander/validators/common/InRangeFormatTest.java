@@ -7,44 +7,44 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class InRangeFormatTest {
 	@Test
-	public void rangeClosedClosed() throws Exception {
+	public void rangeClosedClosed() {
 		assertThat(new InRangeSimple(1, true, 5, true).error()).endsWith("range [1, 5]");
 	}
 
 	@Test
-	public void rangeClosedOpen() throws Exception {
+	public void rangeClosedOpen() {
 		assertThat(new InRangeSimple(1, true, 5, false).error()).endsWith("range [1, 5)");
 	}
 
 	@Test
-	public void rangeOpenClosed() throws Exception {
+	public void rangeOpenClosed() {
 		assertThat(new InRangeSimple(1, false, 5, true).error()).endsWith("range (1, 5]");
 	}
 
 	@Test
-	public void rangeOpenOpen() throws Exception {
+	public void rangeOpenOpen() {
 		assertThat(new InRangeSimple(1, false, 5, false).error()).endsWith("range (1, 5)");
 	}
 
 	@Test
-	public void rangeFromInfinity() throws Exception {
+	public void rangeFromInfinity() {
 		assertThat(new InRangeSimple(null, false, 5, false).error()).endsWith("range (..., 5)");
 		assertThat(new InRangeSimple(null, true, 5, true).error()).endsWith("range (..., 5]");
 	}
 
 	@Test
-	public void rangeToInfinity() throws Exception {
+	public void rangeToInfinity() {
 		assertThat(new InRangeSimple(1, false, null, false).error()).endsWith("range (1, ...)");
 		assertThat(new InRangeSimple(1, true, null, true).error()).endsWith("range [1, ...)");
 	}
 
 	@Test(expected = IllegalArgumentException.class)
-	public void rangeReversed() throws Exception {
+	public void rangeReversed() {
 		new InRangeSimple(5, true, 1, true);
 	}
 
 	@Test(expected = IllegalArgumentException.class)
-	public void rangeUnBordered() throws Exception {
+	public void rangeUnBordered() {
 		new InRangeSimple(null, true, null, true);
 	}
 }

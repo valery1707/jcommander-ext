@@ -55,7 +55,7 @@ public class VirtualFolder extends ExternalResource {
 	}
 
 	public enum FileType {
-		FILE, DIRECTORY, LINK;
+		FILE, DIRECTORY, LINK
 	}
 
 	@SuppressWarnings("WeakerAccess")

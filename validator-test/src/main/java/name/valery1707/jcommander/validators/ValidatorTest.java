@@ -21,7 +21,7 @@ public abstract class ValidatorTest<T, V extends IValueValidator<T>> {
 	}
 
 	@Before
-	public void setUp() throws Exception {
+	public void setUp() {
 		validator = createValidator();
 	}
 
@@ -31,7 +31,7 @@ public abstract class ValidatorTest<T, V extends IValueValidator<T>> {
 	private final boolean isValid;
 
 	@Test
-	public void checkData() throws Exception {
+	public void checkData() {
 		Description description = new TextDescription("Validator must %s value '%s'", (isValid ? "accept" : "decline"), String.valueOf(value));
 		try {
 			validator.validate("-check", value);
