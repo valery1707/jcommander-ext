@@ -59,9 +59,9 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.6</maven.compiler.source>
 		<maven.compiler.target>1.6</maven.compiler.target>
-		<github.tag></github.tag>
-		<github.releaseName></github.releaseName>
-		<github.description></github.description>
+		<github.tag/>
+		<github.releaseName/>
+		<github.description/>
 	</properties>
 
 	<dependencyManagement>
@@ -115,7 +115,7 @@
 			<dependency>
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
-				<version>4.12</version>
+				<version>4.13.1</version>
 			</dependency>
 			<dependency>
 				<groupId>org.assertj</groupId>
